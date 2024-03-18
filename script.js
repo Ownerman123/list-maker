@@ -4,6 +4,12 @@ const removeAllBtn = document.querySelector("#remove-all-btn");
 function CreateNewItem() {
     const newRow = document.createElement("tr");
     newRow.classList.add("itemRows")
+
+    const checkBox = document.createElement("input");
+    checkBox.type = "checkbox";
+    checkBox.name = "is completed";
+    newRow.append(checkBox);
+
     const itemCell = document.createElement("td");
     itemCell.textContent = prompt("Enter the itemto add to the list here", "");
     newRow.append(itemCell);
@@ -37,11 +43,13 @@ function RemoveThis(thing) {
 }
 
 function RemoveAllItems() {
-   const itemTable = document.getElementById("#item-table");
-    //still broke
-    const rows  = itemTable.getElementsByTagName("tr");
+   const itemTable = document.getElementById("item-table");
+    
+    while(itemTable.firstChild) {
+        itemTable.firstChild.remove();
+    }
 
-    rows.remove();
+    
 }
 
 addItemBtn.addEventListener('click', CreateNewItem);
