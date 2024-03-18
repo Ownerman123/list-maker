@@ -1,7 +1,11 @@
 * {
+    
+    color: aliceblue;
+    
+}
 
-color: aliceblue;
-
+body {
+    background-color: rgb(40, 40, 40) ;
 }
 
 #item-table {
@@ -27,6 +31,7 @@ td {
     margin: 2px;
     border: 2px solid grey;
 }
+
 th { 
     flex-basis: 30%;
     margin: 40px;
@@ -43,13 +48,12 @@ table {
     justify-content: center;
 
 }
+
 #add-item-btn {
     flex-basis: 10%;
 }
-
-
-
-
-body {
-    background-color: rgb(40, 40, 40) ;
+button {
+    
+    color: black;
+    text-decoration-color: black;
 }
